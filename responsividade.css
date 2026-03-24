@@ -569,14 +569,26 @@ RESPONSIVIDADE - MEDIA QUERIES
     .blackwork,
     .colorido,
     .preto-branco {
-        transform: scale(1.02);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blackwork.ativo,
+    .colorido.ativo,
+    .preto-branco.ativo {
+        transform: scale(1.02) !important;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .blackwork.ativo:active,
+    .colorido.ativo:active,
+    .preto-branco.ativo:active {
+        transform: scale(0.98) !important;
     }
 
     .blackwork:active,
     .colorido:active,
     .preto-branco:active {
-        transform: scale(0.98);
+        transform: scale(0.98) !important;
     }
 
 /* CONTATO SECTION */

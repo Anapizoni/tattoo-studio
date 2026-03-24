@@ -448,6 +448,28 @@
         let header = document.querySelector('.cabecalho');
         header.classList.toggle('rolar', window.scrollY > 100);
     });
+
+    // ===== ATIVAR EFEITO DE BORDAS NOS CARDS DE ORÇAMENTO PARA 480PX =====
+    function activateOrcamentoEffect() {
+        const orcamentoCards = document.querySelectorAll('.blackwork, .colorido, .preto-branco');
+        
+        // Se tela <= 480px, ativa automático
+        if (window.innerWidth <= 480) {
+            orcamentoCards.forEach(card => {
+                card.classList.add('ativo');
+            });
+        } else {
+            orcamentoCards.forEach(card => {
+                card.classList.remove('ativo');
+            });
+        }
+    }
+
+    // Chamar ao carregar
+    window.addEventListener('load', activateOrcamentoEffect);
+    
+    // Re-verificar ao redimensionar
+    window.addEventListener('resize', activateOrcamentoEffect);
     </script>
 
 
