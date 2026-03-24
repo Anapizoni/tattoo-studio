@@ -1,0 +1,1022 @@
+/* cabeçalho */
+.cabecalho{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 1000;
+    transition: 0.4s;
+}
+
+.cabecalho.rolar {
+    background-color: rgba(0, 0, 0, 0.4); 
+    height: 80px; 
+    backdrop-filter: blur(10px);
+}
+
+.cabecalho.rolar .logo {
+    margin-top: 50px;
+    transition: margin-top 0.4s ease;
+}
+
+.cabecalho.rolar .logo p {
+    margin-bottom: 10px;
+}
+
+.interface-header {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+} 
+
+ .layout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    line-height: 0;
+}
+
+/* logo */
+.logo{
+    display: flex;
+   
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo p{
+    margin: -30px;
+}
+
+.logo img{
+    height: 130px;
+    width: 200px;
+}
+
+/* sessão 1 */
+.home {
+    background: #333131 url(img/background-secao2.png) center center no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.8);
+    flex-wrap: wrap;
+}
+
+.imagem-tatuador {
+    margin: 10% 0 0 20%;
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagem-tatuador img{
+    margin-bottom: 20px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 2px #fff solid;
+    object-position: center top;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
+}
+
+.nome-tatuador{
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.descricao-site {
+    width: 40%;
+    margin: 5% 10% 0px 0px;
+}
+
+.descricao-site p {
+    margin-top: 20px;
+    width: 500px;
+    line-height: 1.5;
+    text-align: justify;
+    letter-spacing: 0.3px;
+}
+
+/*Sessão 2*/
+.sobre{
+    height: 120vh;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    overflow-x: hidden;
+}
+
+.sobre h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.interface-sobre{
+    margin-top: 30px;
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+    min-height: 500px;
+    background-color: #3d3d3d;
+    border-radius: 30px;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.8);
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.texto-sobre {
+    margin: 30px;
+    width: 60%;
+    height: 450px;
+}
+
+.texto-sobre p{
+    display: flex;
+    line-height: 1.5;
+    text-align: justify;
+    letter-spacing: 0.2px;
+    margin: 0px 0px 20px 0px;
+    text-shadow: none;
+}
+
+.cartao-container {
+    width: 350px;
+    height: 100%;
+    perspective: 1000px;
+    margin-left: 8%;
+    display: flex;
+    align-items: center;
+}
+
+.cartao-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.cartao-container:hover .cartao-inner {
+    transform: rotateY(180deg);
+}
+
+.lado {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.lado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.frente img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.verso {
+    width: 90%;  
+    height: 90%; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(180deg);
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+/* Sessão 3 */
+.galeria {
+    background-color: black;
+    height: auto;
+    min-height: 140vh;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+
+.galeria h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.galeria-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+.linha-galeria {
+    width: 100%;
+    height: 1px;
+    background-color: #5d4a3e;
+    box-shadow: 0 0 10px rgba(139, 101, 76, 0.4);
+    margin-top: 50px;
+}
+
+.texto-galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+    background-color: black;
+    border: 2px solid #5d4a3e;
+    width: clamp(50%, 20vw, 25%);
+    min-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+.texto-galeria h3 {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    white-space: nowrap;
+}
+
+/* Posts no Instagram */
+.galeria {
+    background-color: black;
+    height: 140vh;
+    padding-top: 100px; 
+}
+
+
+.galeria-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linha-galeria {
+    width: 100%;
+    height: 1px;
+    background-color: #5d4a3e;
+    box-shadow: 0 0 10px rgba(139, 101, 76, 0.4);
+    margin-top: 50px;
+}
+
+.texto-galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+    background-color: black;
+    border: 2px solid #5d4a3e;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+}
+
+
+/* Posts no Instagram */
+.galeria-container {
+    margin-top: 20px;
+    width: 50%;
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 50px; 
+    padding: 50px;
+    border-radius: 20px;
+    margin-left: 60px;
+    justify-content: flex-start;
+}
+
+.card-tatoo {
+    overflow: hidden;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.3s ease;
+    border: 2px solid #5d4a3e;
+    box-shadow: 0 0 20px rgba(206, 173, 151, 0.6);
+}
+
+.card-tatoo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-grande {
+  grid-row: span 2;
+}
+
+.card-tatoo:hover {
+  box-shadow: 0 0 20px rgba(212, 200, 191, 0.8);
+  transform: scale(1.02);
+  border-color: #c29272;
+}
+.galeria-linha {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-left: 60px;
+}
+
+/* perfil */
+.card-perfil-instagram {
+    background-color: #000;
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #5d4a3e;
+    box-shadow: 0 0 15px rgba(139, 101, 76, 0.4);
+    margin-top: 200px;
+    width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-perfil-instagram:hover {
+    box-shadow: 0 0 25px rgba(139, 101, 76, 0.8);
+    border-color: #c29272;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Foto e Nome */
+.header-perfil {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.foto-avatar {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 2px solid #262626;
+}
+
+
+/* Stats (Posts, Seguidores) */
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Bio e Links */
+.bio {
+    line-height: 1.4;
+}
+
+.link-whats {
+    color: #e0f1ff;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Botões do Instagram */
+.botoes-acao {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.btn-insta {
+    flex: 1;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 210px;
+    margin-right: 10px;
+}
+
+.azul {
+    background-color: #015aff;
+
+}
+
+.azul:hover {
+    background-color: #004edd;
+}
+
+.cinza {
+    background-color: #262626;
+}
+.cinza:hover {
+    background-color: #363636;
+}
+
+/* sessão cuidados */
+
+.cuidados {
+    overflow-x: hidden;
+}
+
+.interface-titulo-cuidados{
+    width: 100%;
+    height: auto;
+    min-height: 20vh;
+    background-color: #383330;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cuidados-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    word-wrap: break-word;
+}
+
+.interface-cuidados{
+    margin: 5% clamp(15px, 5%, 15%);
+    overflow-x: hidden;
+}
+
+.interface-cuidados > div {
+    padding-left: 8%;
+    border-left: 2px solid #aa9080;
+    margin-top: 70px;
+}
+
+.interface-cuidados h3 {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.interface-cuidados p {
+    margin-left: 50px;
+}
+
+/* Conteúdo dos Cuidados escondidos*/
+
+.bloco-cuidados {
+    width: 80%;
+    padding: 2% 10% 0% 5%;
+}
+.bloco-cuidados:hover {
+    background-color: #4a4038;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.titulo-cuidados {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;   
+}
+
+.conteudo-cuidados {
+    margin-top: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.conteudo-cuidados.ativo {
+    max-height: 1000px;
+}
+
+.seta {
+    font-size: 18px;
+}
+
+/* ORÇAMENTO */
+.orcamento {
+    overflow-x: hidden;
+}
+
+.orcamento-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    word-wrap: break-word;
+}
+
+.interface-titulo-orcamento {
+    margin-top: 60px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.interface-titulo-orcamento p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.4;
+}
+
+/* Card do Orcamento */
+
+.conteiner-orcamento {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: clamp(30px, 10vw, 150px);
+    align-items: stretch;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card-orcamento{
+    width: 100%;
+    max-width: 350px;
+    min-height: 450px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #ffffff;
+}
+
+.card-orcamento h3 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.subtitulo-orcamento {
+    width: 40%;
+    border-bottom: #fff solid 1px;
+    margin-left: 10px;
+    overflow: visible;         
+    white-space: nowrap;
+}
+
+.card-orcamento p {
+    margin: 25px 20px 0px 15px;
+}
+
+.preco {
+    margin-top: auto;
+    text-align: right;
+    margin-right: 15%;
+    margin-bottom: 5px;
+
+}
+
+.preco .menor {
+    font-size: 20px; /* Ajuste o tamanho como preferir (o original do preço é 25px) */
+    margin-left: 5px;
+}
+
+.btn-orcamento {
+    background-color: #5d4a3e;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px; /* Ajustado de 3px para 8px */
+    cursor: pointer;
+    width: 60%; /* Aumentado um pouco para melhor proporção */
+    height: 50px;
+    margin: 15px auto 20px auto;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-orcamento:hover {
+    background-color: #7a6353;
+    transform: translateY(-2px);
+}
+
+.btn-orcamento:active {
+    transform: translateY(0);
+}
+
+.blackwork:hover, .colorido:hover, .preto-branco:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+               
+}
+
+.blackwork {
+    position: relative;
+    overflow: hidden; 
+    z-index: 1;
+}
+
+.blackwork * {
+    position: relative;
+    z-index: 2;
+}
+
+.blackwork::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255,255,255,0) 70%);
+    top: -25%;
+    left: -25%;
+    animation: rodar 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -2;
+}
+
+.blackwork::after {
+    content: '';
+    position: absolute;
+    inset: 4px; /* Grossura da borda (4px) */
+    background: rgb(26, 23, 23);
+    border-radius: 6px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.blackwork:hover::before{
+    opacity: 1;
+    animation: rodar 1.5s linear 1 forwards;
+}
+
+.blackwork:hover::after {
+    opacity: 1;
+}
+
+.colorido {
+    position: relative;
+    overflow: hidden; 
+    z-index: 1;
+}
+
+.colorido * {
+    position: relative;
+    z-index: 2;
+}
+
+.colorido::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+    top: -25%;
+    left: -25%;
+    animation: rodar 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -2;
+}
+
+.colorido::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: rgb(26, 23, 23);
+    border-radius: 6px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.colorido:hover::before{
+    opacity: 1;
+    animation: rodar 1.5s linear 1 forwards; 
+}
+
+.colorido:hover::after {
+    opacity: 1;
+}
+
+.preto-branco {
+    position: relative;
+    overflow: hidden; 
+    z-index: 1;
+}
+
+.preto-branco * {
+    position: relative;
+    z-index: 2;
+}
+
+.preto-branco::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: repeating-conic-gradient(#fff 0% 25%, #000 25% 50%);
+    top: -25%;
+    left: -25%;
+    animation: rodar 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -2;
+}
+
+.preto-branco::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: rgb(26, 23, 23);
+    border-radius: 6px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.preto-branco:hover::before {
+    opacity: 1;
+    animation: rodar 1.5s linear 1 forwards;
+}
+
+.preto-branco:hover::after {
+    opacity: 1;
+}
+
+@keyframes rodar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Sessão Contato */                                                                                                                                                             
+.contato {                                                                                                                                                                       
+    background-color: #1a1717;
+    min-height: 80vh;
+    padding: 80px 0;
+    overflow-x: hidden;
+}
+
+.interface-contato {
+    max-width: 700px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.texto-contato {
+    text-align: center;
+    width: 100%;
+}
+
+.texto-contato h2 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: cizel, serif;
+    word-wrap: break-word;
+}
+
+.texto-contato p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.formulario-contato {
+    width: 100%;
+    padding: clamp(20px, 5%, 40px);
+    border-radius: 20px;
+    
+    
+}
+
+.input-grupo input, 
+.input-grupo textarea {
+    width: 100%;
+    background-color: #313131;
+    border: 1px solid #363636;
+    padding: clamp(10px, 2%, 15px);
+    border-radius: 3px;
+    color: #c2c2c2;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-grupo textarea {
+    height: 120px;
+    resize: vertical;
+    max-height: 300px;
+}
+
+.label-contato {
+    display: block;
+    color: #ccc;
+    margin-bottom: 8px;
+    font-size: clamp(1.1rem, 1vw, 0.95rem);
+    font-family: nunito, sans-serif;
+    font-weight: 300;
+    
+}
+
+.input-grupo {
+    margin-bottom: 15px;
+}
+
+/* Input de arquivo específico */
+.input-grupo input[type="file"] {
+    height: 40px;
+    padding: 8px 12px;
+    background-color: #2a2a2a;
+    border: 2px dashed #5d4a3e;
+    border-radius: 6px;
+    color: #707070;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-grupo input[type="file"]:hover {
+    border-color: #7a6353;
+    background-color: #333;
+}
+
+.input-grupo input[type="file"]:focus {
+    border-color: #c29272;
+    box-shadow: 0 0 8px rgba(194, 146, 114, 0.3);
+}
+
+/* Botão de Enviar */
+.btn-enviar button {
+    width: 100%;
+    background-color: #4b3e36;
+    color: #fff;
+    border: none;
+    padding: clamp(12px, 2%, 15px);
+    font-size: clamp(0.95rem, 2vw, 1rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+
+/* Footer */
+.rodape {
+    background-color: #000;
+    color: #fff;
+    padding: clamp(40px, 5%, 60px) 0 20px 0;
+    border-top: 1px solid #5d4a3e;
+    overflow-x: hidden;
+}
+
+.interface-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(20px, 5%, 40px);
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-col h3 {
+    font-family: 'Cinzel', serif;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    word-wrap: break-word;
+}
+
+/* Redes Sociais / QR Code */
+.qrcode-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.qrcode-img {
+    width: clamp(100px, 20vw, 150px);
+    height: clamp(100px, 20vw, 150px);
+    border: 4px solid #fff;
+    border-radius: 10px;
+    background-color: #fff;
+    object-fit: cover;
+}
+
+/* Logo Central */
+.logo-footer img {
+    height: clamp(80px, 15vw, 150px);
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-footer p {
+    font-family: "thedeadsaloon",Arial, Helvetica, sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+/* Localização */
+.mapa-container {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+    line-height: 0;
+    margin-bottom: 10px;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    max-width: 200px !important;
+    height: auto;
+    aspect-ratio: 1;
+    filter: grayscale(100%) invert(90%) opacity(0.7);
+    transition: 0.5s;
+}
+
+.mapa-container iframe:hover {
+    filter: grayscale(0%) invert(0%) opacity(1);
+}
+
+.info-local p {
+    margin-bottom: 8px;
+    color: #ccc;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
+    color: #555;
+}
+
+
+

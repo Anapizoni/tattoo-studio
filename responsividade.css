@@ -1,0 +1,664 @@
+/* ========================================
+RESPONSIVIDADE - MEDIA QUERIES
+======================================== */
+
+/* MEDIA 1024 */
+@media (max-width: 1024px) {
+    .galeria {
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    /* ORÇAMENTO SECTION */
+    .conteiner-orcamento {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .card-orcamento {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* GALERIA */
+    .galeria-linha {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .galeria-container {
+        width: 90%;
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+        padding: 30px;
+        margin-left: 0;
+    }
+
+    .card-grande {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+
+    .card-tatoo {
+        height: 250px;
+    }
+
+    .card-perfil-instagram {
+        width: 90%;
+        max-width: 400px;
+        margin-top: 50px;
+    }
+
+/* FOOTER */
+    .footer-layout {
+        gap: 30px;
+    }
+}
+
+/* MEDIA 932PX */
+@media (max-width: 932px) {
+    
+    /* CABEÇALHO */
+    .home {
+        flex-direction: column-reverse;
+        height: auto;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 20px;
+        text-align: center;
+
+    }
+
+    .imagem-tatuador {
+        margin: 0 0 30px 0;
+        width: 100%;
+    }
+
+    .imagem-tatuador img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .nome-tatuador {
+        width: auto;
+        padding: 10px 30px;
+        display: inline-flex;
+    }
+
+    .descricao-site {
+        width: 95%;
+        margin: 30px auto 0;
+    }
+
+    .descricao-site h1 {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+
+    .descricao-site p {
+        width: 100%;
+        max-width: 550px;
+        margin: 20px auto 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    /* SOBRE SECTION */
+    .sobre {
+        height: auto;
+        padding: 100px 20px;
+        margin-top: 0;
+    }
+
+    .interface-sobre {
+        width: 95%;
+        height: auto;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .cartao-container {
+        width: 100%;
+        height: 300px;
+        margin-left: 0;
+    }
+
+    .texto-sobre {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .texto-sobre p {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+
+
+
+/* MEDIA 768PX */
+@media (max-width: 768px) {
+    /* CABEÇALHO */
+    .cabecalho {
+        height: 120px;
+    }
+    
+    .logo img {
+        height: 100px;
+        width: 150px;
+    }
+    
+    .logo p {
+        margin: -20px;
+        font-size: 0.9rem;
+    }
+    
+    .menu-navegacao ul {
+        display: none;
+    }
+    
+    .menu-navegacao.ativo ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .menu-navegacao ul li {
+        padding: 10px 0;
+    }
+    
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    
+    .mobile-menu div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        transition: 0.3s;
+    }
+
+    /* GALERIA */
+    .galeria-container {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .card-tatoo {
+        height: 200px;
+    }
+    
+    .texto-galeria {
+        width: 50%;
+    }
+
+    /* CUIDADOS */
+    .interface-cuidados {
+        margin: 20px 15px;
+    }
+
+    .interface-cuidados > div {
+        padding-left: 15px;
+        margin-top: 40px;
+    }
+
+    .bloco-cuidados {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .titulo-cuidados {
+        font-size: 1.2rem;
+    }
+    
+    .interface-cuidados p {
+        margin-left: 20px;
+        font-size: 0.95rem;
+    }
+    
+    .interface-cuidados h3 {
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+
+    /* ORÇAMENTO */
+    .conteiner-orcamento {
+        gap: 40px;
+        padding: 30px 15px;
+    }
+
+    .card-orcamento {
+        max-width: 350px;
+        min-height: 400px;
+    }
+
+    .card-orcamento h3 {
+        font-size: 24px;
+    }
+
+    .btn-orcamento {
+        font-size: 16px;
+        height: 45px;
+        width: 70%;
+    }
+
+    /* CONTATO */
+    .interface-contato {
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .texto-contato h2 {
+        font-size: 28px;
+    }
+
+    .texto-contato p {
+        font-size: 16px;
+    }
+
+    .formulario-contato {
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    /* RODAPÉ */
+    .rodape {
+        padding: 40px 0 15px 0;
+    }
+
+    .footer-layout {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .footer-col {
+        flex: 1;
+    }
+
+    .footer-col h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .qrcode-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .logo-footer img {
+        height: 120px;
+    }
+
+    .mapa-container iframe {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+/* MEDIA 480PX */
+@media (max-width: 480px) {
+
+    /* CABEÇALHO */
+    .home {
+        padding: 80px 15px;
+        min-height: auto;
+        margin-top: 15%;
+        margin-bottom: -50px;
+    }
+
+    .imagem-tatuador {
+        margin-top: 15%;
+    }
+
+    .imagem-tatuador img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .descricao-site h1 {
+        font-size: 1.8rem;
+    }
+
+    .descricao-site p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .logo p {
+        font-size: 1.3rem;
+    }
+
+    /* SOBRE */
+    .interface-sobre {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .cartao-container {
+        height: 250px;
+    }
+
+    .lado img {
+        height: 100%;
+    }
+
+    .frente img {
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    .texto-sobre {
+        max-height: 300px;
+        overflow-y: auto;
+        padding-right: 10px;
+    }
+
+    .texto-sobre p {
+        font-size: 0.95rem;
+    }
+
+    .texto-sobre::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .texto-sobre::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+
+    .texto-sobre::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+    }
+
+    .texto-sobre::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+/* GALERIA SECTION */
+    .galeria-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    justify-items: center;
+    }
+
+    .card-tatoo {
+    height: 180px;
+    width: 100%;
+    max-width: 180px;
+    }
+
+    .card-tatoo:nth-child(1),
+    .card-tatoo:nth-child(2),
+    .card-tatoo:nth-child(3) {
+        grid-row: 1;
+    }
+
+    .card-tatoo:nth-child(4) {
+        grid-row: 2;
+        margin-left: 100px;
+    }
+
+    .card-tatoo:nth-child(5) {
+        grid-row: 2;
+        margin-left: 100px;
+    }
+
+    .card-perfil-instagram {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .foto-avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .header-perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 15px;
+    }
+
+    .btn-insta {
+        width: 150px;
+        margin-right: 3px;
+    }
+
+    .texto-galeria {
+        width: 75%;
+    }
+
+/* CUIDADOS SECTION */
+    .interface-titulo-cuidados {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .interface-cuidados {
+        margin: 15px 10px;
+    }
+
+    .interface-cuidados > div {
+        padding-left: 10px;
+        border-left: 2px solid #aa9080;
+        margin-top: 30px;
+    }
+
+    .cuidados-titulo {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: 20px;
+    }
+
+    .interface-titulo-cuidados p {
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+    }
+
+    .titulo-cuidados {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .interface-cuidados p {
+        margin-left: 15px;
+        text-align: justify;
+    }
+
+    .conteudo-cuidados {
+        max-height: 0;
+    }
+
+    .conteudo-cuidados.ativo {
+        max-height: 1500px;
+    }
+
+    /* ORÇAMENTO */
+    .interface-titulo-orcamento {
+        margin-top: 80px;
+        padding: 20px 15px;
+    }
+
+    .interface-titulo-orcamento p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .orcamento-titulo {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: 20px;
+    }
+
+    .interface-titulo-orcamento p {
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+        text-shadow: 
+        2px 2px 5px black,
+        2px 2px 10px rgb(0, 0, 0);
+    }
+
+    .conteiner-orcamento {
+        gap: 30px;
+        padding: 20px 10px;
+    }
+
+    .card-orcamento {
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        padding: 20px 15px;
+    }
+
+    .card-orcamento h3 {
+        font-size: 20px;
+    }
+
+    .card-orcamento p {
+        margin: 15px 10px 0px 10px;
+        font-size: 0.9rem;
+    }
+
+    .subtitulo-orcamento {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .preco {
+        margin-right: 5%;
+        font-size: 1.5rem;
+    }
+
+    .btn-orcamento {
+        width: 80%;
+        font-size: 14px;
+        height: 40px;
+    }
+
+/* CONTATO SECTION */
+    .contato {
+        padding: 60px 0;
+    }
+
+    .interface-contato {
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .texto-contato h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .texto-contato p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .formulario-contato {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .input-grupo input,
+    .input-grupo textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .input-grupo input[type="file"] {
+        height: 35px;
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .input-grupo textarea {
+        height: 100px;
+    }
+
+    .btn-enviar button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+/* RODAPÉ */
+    .interface-footer {
+        padding: 0 15px;
+    }
+
+    .footer-layout {
+        gap: 30px;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col h3 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+    .qrcode-img {
+        width: 100px;
+        height: 100px;
+        border: 3px solid #fff;
+    }
+
+    .logo-footer img {
+        height: 80px;
+    }
+
+    .logo-footer p {
+        font-size: 1rem;
+    }
+
+    .info-local p {
+        font-size: 0.9rem;
+    }
+
+    .mapa-container iframe {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 342px) {
+    .btn-insta {
+        width: 110px;    
+    }
+}
