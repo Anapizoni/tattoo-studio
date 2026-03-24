@@ -565,6 +565,20 @@ RESPONSIVIDADE - MEDIA QUERIES
         height: 40px;
     }
 
+    /* Efeito de bordas automático em mobile para cards de orçamento */
+    .blackwork,
+    .colorido,
+    .preto-branco {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+    }
+
+    .blackwork:active,
+    .colorido:active,
+    .preto-branco:active {
+        transform: scale(0.98);
+    }
+
 /* CONTATO SECTION */
     .contato {
         padding: 60px 0;
