@@ -5,6 +5,14 @@ const menuLinks = document.querySelectorAll('.menu-navegacao a[href^="#"]');
 const cabecalho = document.querySelector(".cabecalho");
 const activeClass = "active";
 
+function handleMenuToggle(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const isOpen = !menuNavegacao.classList.contains(activeClass);
+    setMenuState(isOpen);
+}
+
 function animateLinks(isOpen) {
     menuItens.forEach((item, index) => {
         item.style.animation = isOpen
@@ -28,13 +36,8 @@ function getHeaderOffset() {
 }
 
 if (mobileMenu && menuNavegacao) {
-    mobileMenu.addEventListener("click", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-
-        const isOpen = !menuNavegacao.classList.contains(activeClass);
-        setMenuState(isOpen);
-    });
+    mobileMenu.addEventListener("click", handleMenuToggle);
+    mobileMenu.addEventListener("touchstart", handleMenuToggle, { passive: false });
 
     menuLinks.forEach((link) => {
         link.addEventListener("click", (event) => {

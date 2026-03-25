@@ -63,6 +63,8 @@
 .mobile-menu {
     display: none;
     cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-menu div{
@@ -126,6 +128,7 @@
 
     .menu-navegacao.ativo li,
     .menu-navegacao.active li {
+        opacity: 1;
         transform: translateY(-30px);
     }
 
