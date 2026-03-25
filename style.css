@@ -837,7 +837,7 @@
     
 }
 
-.input-grupo input, 
+.input-grupo input,
 .input-grupo textarea {
     width: 100%;
     background-color: #313131;
@@ -856,6 +856,119 @@
     max-height: 300px;
 }
 
+.custom-select {
+    position: relative;
+    isolation: isolate;
+}
+
+.custom-select-trigger {
+    width: 100%;
+    background: linear-gradient(180deg, rgba(58, 58, 58, 0.7) 0%, rgba(42, 42, 42, 0.78) 100%);
+    border: 1px solid rgba(194, 146, 114, 0.18);
+    padding: clamp(10px, 2%, 15px);
+    border-radius: 3px;
+    color: #c2c2c2;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.custom-select-trigger::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #c2c2c2;
+    border-bottom: 2px solid #c2c2c2;
+    transform: translateY(-65%) rotate(45deg);
+    transition: transform 0.25s ease;
+}
+
+.custom-select.open .custom-select-trigger {
+    border-color: #5d4a3e;
+    box-shadow: 0 0 0 2px rgba(93, 74, 62, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.custom-select.open .custom-select-trigger::after {
+    transform: translateY(-25%) rotate(-135deg);
+}
+
+.custom-select-value.placeholder {
+    color: #8d8d8d;
+}
+
+.custom-select-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(44, 39, 37, 0.32) 0%, rgba(22, 21, 21, 0.2) 100%);
+    backdrop-filter: blur(34px) saturate(160%);
+    -webkit-backdrop-filter: blur(34px) saturate(160%);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.24);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px) scale(0.98);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.custom-select-menu::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.01) 100%);
+    pointer-events: none;
+}
+
+.custom-select.open .custom-select-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+.custom-select-option {
+    position: relative;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: #d7d7d7;
+    text-align: left;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-select-option:hover,
+.custom-select-option.active {
+    background: rgba(131, 111, 95, 0.22);
+    border-color: rgba(194, 146, 114, 0.26);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transform: translateX(4px);
+}
+
+.input-grupo input:focus,
+.input-grupo textarea:focus {
+    border-color: #5d4a3e;
+    box-shadow: 0 0 0 2px rgba(93, 74, 62, 0.2);
+}
+
 .label-contato {
     display: block;
     color: #ccc;
@@ -868,29 +981,6 @@
 
 .input-grupo {
     margin-bottom: 15px;
-}
-
-/* Input de arquivo específico */
-.input-grupo input[type="file"] {
-    height: 40px;
-    padding: 8px 12px;
-    background-color: #2a2a2a;
-    border: 2px dashed #5d4a3e;
-    border-radius: 6px;
-    color: #707070;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.input-grupo input[type="file"]:hover {
-    border-color: #7a6353;
-    background-color: #333;
-}
-
-.input-grupo input[type="file"]:focus {
-    border-color: #c29272;
-    box-shadow: 0 0 8px rgba(194, 146, 114, 0.3);
 }
 
 /* Botão de Enviar */

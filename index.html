@@ -20,6 +20,7 @@
     <title>Tattoo Studio</title>
 </head>
 <body>
+    <div class="menu-backdrop" aria-hidden="true"></div>
     <header class="cabecalho">
         <div class="interface-header">
             <div class="layout-header">
@@ -338,7 +339,7 @@
 
                 <!-- formulario -->
                  <div class="formulario-contato">
-                    <form action="#">
+                    <form action="#" data-whatsapp="5527999146599">
                         <div class="input-grupo">
                             <label for="nome" class="label-contato">Nome</label>
                             <input type="text" name="nome" id="nome" placeholder="Seu Nome Completo" required>
@@ -348,12 +349,18 @@
                             <input type="email" name="email" id="email" placeholder="Seu E-mail" required>
                         </div>
                         <div class="input-grupo">
-                            <label for="whatsapp" class="label-contato">WhatsApp</label>
-                            <input type="tel" name="whatsapp" id="whatsapp" placeholder="Seu WhatsApp" required>
-                        </div>
-                        <div class="input-grupo">
-                            <label for="imagem" class="label-contato">Anexar uma referência (opcional):</label>
-                            <input type="file" name="imagem" id="imagem" accept="image/*" class="arquivo">
+                            <label for="assunto-trigger" class="label-contato">Assunto</label>
+                            <div class="custom-select" data-select>
+                                <input type="hidden" name="assunto" id="assunto" value="">
+                                <button type="button" class="custom-select-trigger" id="assunto-trigger" aria-haspopup="listbox" aria-expanded="false">
+                                    <span class="custom-select-value">Selecione um assunto</span>
+                                </button>
+                                <div class="custom-select-menu" role="listbox" aria-label="Assunto">
+                                    <button type="button" class="custom-select-option" data-value="Projeto de tatuagem" role="option">Projeto de tatuagem</button>
+                                    <button type="button" class="custom-select-option" data-value="Marcar horario" role="option">Marcar horario</button>
+                                    <button type="button" class="custom-select-option" data-value="Outros" role="option">Outros</button>
+                                </div>
+                            </div>
                         </div>
                         <div class="input-grupo">
                             <label for="mensagem" class="label-contato">Nos explique a sua ideia</label>

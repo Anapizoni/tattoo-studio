@@ -281,27 +281,6 @@ RESPONSIVIDADE - MEDIA QUERIES
         width: 800px;
     }
     
-    .menu-navegacao ul {
-        display: none;
-    }
-    
-    .menu-navegacao.ativo ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 120px;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.95);
-        width: 100%;
-        padding: 20px 0;
-        text-align: center;
-    }
-    
-    .menu-navegacao ul li {
-        padding: 10px 0;
-    }
-    
     .mobile-menu {
         display: flex;
         flex-direction: column;
@@ -787,12 +766,6 @@ RESPONSIVIDADE - MEDIA QUERIES
     .input-grupo textarea {
         padding: 12px;
         font-size: 14px;
-    }
-
-    .input-grupo input[type="file"] {
-        height: 35px;
-        padding: 6px 10px;
-        font-size: 11px;
     }
 
     .input-grupo textarea {
