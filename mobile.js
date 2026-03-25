@@ -28,6 +28,7 @@ function setMenuState(isOpen) {
 
     mobileMenu.classList.toggle(activeClass, isOpen);
     menuNavegacao.classList.toggle(activeClass, isOpen);
+    mobileMenu.setAttribute("aria-expanded", String(isOpen));
     animateLinks(isOpen);
 }
 
@@ -37,7 +38,6 @@ function getHeaderOffset() {
 
 if (mobileMenu && menuNavegacao) {
     mobileMenu.addEventListener("click", handleMenuToggle);
-    mobileMenu.addEventListener("touchstart", handleMenuToggle, { passive: false });
 
     menuLinks.forEach((link) => {
         link.addEventListener("click", (event) => {

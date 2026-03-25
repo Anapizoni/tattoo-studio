@@ -62,9 +62,18 @@
 
 .mobile-menu {
     display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: 0;
+    background: transparent;
     cursor: pointer;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-menu:focus {
+    outline: none;
 }
 
 .mobile-menu div{
