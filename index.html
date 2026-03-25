@@ -25,31 +25,24 @@
             <div class="layout-header">
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="#home"><img src="img/logo.png" alt="">
-                    <p>Tatto Studio</p>
+                    <a href="#home">
+                        <img src="img/logo.png" alt="">
+                        <p>Tatto Studio</p>
+                    </a>
                 </div>
                 <!-- Navegação -->
-                <!-- <div class="menu-toggle"> -->
-                    <nav class="menu-navegacao">
-                        <!-- menu hamburguer -->
-                        <!-- <input type="checkbox" id="menu-hamburguer"> -->
-                        <!-- <label for="menu-hamburguer" class="menu-label">
-                            <div class="menu">
-                                 <span class="hamburguer">
-                                </span> 
-                             </div> 
-                        </label> -->
-
-                        <!--  MENU HAMBURGUER -->
-                        <div class="mobile-menu">
-                            <div class="line1"></div>
-                            <div class="line2"></div>
-                            <div class="line3"></div>
-
-                        </div>
-
-
-                        <ul>
+                   <div class="mover-menu">  
+                       <div class="mobile-menu">
+                           <div class="line1"></div>
+                           <div class="line2"></div>
+                           <div class="line3"></div>
+   
+                       </div>
+                   </div>                 
+                    <nav class="nav-layout">
+                        
+                        <!-- MENU HAMBURGUER -->
+                        <ul class="menu-navegacao">
                             <li><a href="#home">Home</a></li>
                             <li><a href="#sobre">Sobre</a></li>
                             <li><a href="#galeria">Galeria</a></li>
@@ -415,24 +408,6 @@
 
 
     <script>
-    // ===== MENU HAMBURGER =====
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const menuNav = document.querySelector('.menu-navegacao');
-    const menuLinks = document.querySelectorAll('.menu-navegacao a');
-
-    mobileMenu.addEventListener('click', function() {
-        mobileMenu.classList.toggle('ativo');
-        menuNav.classList.toggle('ativo');
-    });
-
-    // Fechar menu ao clicar em um link
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileMenu.classList.remove('ativo');
-            menuNav.classList.remove('ativo');
-        });
-    });
-
     // ===== CUIDADOS - ACCORDION =====
     const botoes = document.querySelectorAll(".titulo-cuidados");
 
@@ -472,6 +447,7 @@
     window.addEventListener('resize', activateOrcamentoEffect);
     </script>
 
+    <script src="mobile.js"></script>
 
 </body>
 </html>

@@ -48,10 +48,9 @@ p{
 }
 
 .sobre-mim, .galeria-titulo, .cuidados-titulo, .orcamento-titulo {
-    font-family: Cinzel, Arial, Helvetica, sans-serif;
+    font-family: Cinzel, Arial, Helvetica, sans-serif ;
     font-weight: 900;
-    font-size: 70px;
-
+    font-size: 60px ;
 }
 
 .texto-sobre p{

@@ -1,9 +1,54 @@
 /* ========================================
 RESPONSIVIDADE - MEDIA QUERIES
 ======================================== */
+@media (max-width: 1395px) {
+   
+}
+
+
 
 /* MEDIA 1024 */
 @media (max-width: 1024px) {
+    /* CABEÇALHO */
+    
+    /* sessão 1 */
+    .home {
+        height: auto;
+        min-height: 70vh;
+    }
+
+    .imagem-tatuador {
+        margin-left: 150px;
+    }
+
+    .imagem-tatuador img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .descricao-site h1 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+    }
+
+    .descricao-site p {
+        width: 100%;
+        max-width: 400px;
+        margin: 40px auto 0;
+        font-size: 1.1rem;
+    }
+
+    /* SOBRE SECTION */
+
+    .sobre {
+        height: 80vh;
+    }
+
+    .texto-sobre p {
+        font-size: 1.1rem;
+    }
+
     .galeria {
         height: auto;
         padding-top: 50px;
@@ -32,12 +77,36 @@ RESPONSIVIDADE - MEDIA QUERIES
 
     .galeria-container {
         width: 90%;
-        height: auto;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         gap: 30px;
         padding: 30px;
         margin-left: 0;
+        margin-bottom: 10%;
+    }
+
+
+    .card-tatoo {
+    height: 350px;
+    width: 100%;
+    max-width: 250px;
+    
+    }
+
+    .card-tatoo:nth-child(1),
+    .card-tatoo:nth-child(2),
+    .card-tatoo:nth-child(3) {
+        grid-row: 1;
+    }
+
+    .card-tatoo:nth-child(4) {
+        grid-row: 2;
+        margin-left: 130px;
+    }
+
+    .card-tatoo:nth-child(5) {
+        grid-row: 2;
+        margin-left: 150px;
     }
 
     .card-grande {
@@ -45,14 +114,15 @@ RESPONSIVIDADE - MEDIA QUERIES
         grid-column: span 1;
     }
 
-    .card-tatoo {
-        height: 250px;
-    }
 
     .card-perfil-instagram {
         width: 90%;
-        max-width: 400px;
+        max-width: 80%;
         margin-top: 50px;
+    }
+
+    .btn-insta {
+        width: 370px;
     }
 
 /* FOOTER */
@@ -65,6 +135,13 @@ RESPONSIVIDADE - MEDIA QUERIES
 @media (max-width: 932px) {
     
     /* CABEÇALHO */
+    .logo {
+        width: 500px;
+          
+    }
+
+    /* SOBRE SECTION */
+    
     .home {
         flex-direction: column-reverse;
         height: auto;
@@ -77,7 +154,7 @@ RESPONSIVIDADE - MEDIA QUERIES
     }
 
     .imagem-tatuador {
-        margin: 0 0 30px 0;
+        margin: 80px 0 30px 0;
         width: 100%;
     }
 
@@ -95,20 +172,20 @@ RESPONSIVIDADE - MEDIA QUERIES
 
     .descricao-site {
         width: 95%;
-        margin: 30px auto 0;
+        margin: 15% auto 0;
     }
 
     .descricao-site h1 {
-        font-size: 2.2rem;
+        font-size: 3rem;
         line-height: 1.3;
     }
 
     .descricao-site p {
         width: 100%;
         max-width: 550px;
-        margin: 20px auto 0;
+        margin: 40px auto 0;
         text-align: center;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     /* SOBRE SECTION */
@@ -121,13 +198,12 @@ RESPONSIVIDADE - MEDIA QUERIES
     .interface-sobre {
         width: 95%;
         height: auto;
-        flex-direction: column-reverse;
         gap: 30px;
     }
 
     .cartao-container {
         width: 100%;
-        height: 300px;
+        height: auto;
         margin-left: 0;
     }
 
@@ -141,6 +217,55 @@ RESPONSIVIDADE - MEDIA QUERIES
         text-align: center;
         margin-bottom: 15px;
     }
+
+    .lado img {
+        height: auto;
+    }
+
+
+
+    .galeria-container {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    justify-items: center;
+    }
+
+    .card-tatoo {
+    height: 350px;
+    width: 100%;
+    max-width: 250px;
+    }
+
+    .card-tatoo:nth-child(1),
+    .card-tatoo:nth-child(2),
+    .card-tatoo:nth-child(3) {
+        grid-row: 1;
+    }
+
+    .card-tatoo:nth-child(4) {
+        grid-row: 2;
+        margin-left: 250px;
+    }
+
+    .card-tatoo:nth-child(5) {
+        grid-row: 2;
+        margin-left: 300px;
+    }
+
+    .card-perfil-instagram {
+        max-width: 80%;
+        
+    }
+
+    .btn-insta {
+        width: 330px;
+        margin-right: 3px;
+    }
 }
 
 
@@ -152,14 +277,8 @@ RESPONSIVIDADE - MEDIA QUERIES
         height: 120px;
     }
     
-    .logo img {
-        height: 100px;
-        width: 150px;
-    }
-    
-    .logo p {
-        margin: -20px;
-        font-size: 0.9rem;
+    .logo {
+        width: 800px;
     }
     
     .menu-navegacao ul {
@@ -189,6 +308,14 @@ RESPONSIVIDADE - MEDIA QUERIES
         gap: 6px;
         cursor: pointer;
         margin-right: 20px;
+    }
+
+    .mover-menu {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        z-index: 1005;
     }
     
     .mobile-menu div {
@@ -322,6 +449,36 @@ RESPONSIVIDADE - MEDIA QUERIES
 @media (max-width: 480px) {
 
     /* CABEÇALHO */
+    .logo {
+        width: auto;
+    }
+
+    .logo img {
+        width: 60%;
+        height: auto;
+        margin-right: 3%;
+    }
+
+    .logo p {
+
+        font-size: 0.95rem !important;
+    }
+
+    .mobile-menu div{
+        width: 25px;
+        height: 2px;
+        margin: 1px;
+    }
+
+    .menu-navegacao {
+        width: 100vw;
+        top: 10vh;
+    }
+
+    .cabecalho.rolar .logo p {
+    margin-top: 10px;
+    }
+
     .home {
         padding: 80px 15px;
         min-height: auto;
@@ -355,6 +512,11 @@ RESPONSIVIDADE - MEDIA QUERIES
     .interface-sobre {
         padding: 20px;
         border-radius: 15px;
+        width: 95%;
+        height: auto;
+        flex-direction: column-reverse;
+        gap: 30px;
+    
     }
 
     .cartao-container {
@@ -379,6 +541,11 @@ RESPONSIVIDADE - MEDIA QUERIES
 
     .texto-sobre p {
         font-size: 0.95rem;
+    }
+
+    .sobre-mim,
+    .galeria-titulo {
+        font-size: clamp(1.6rem, 5vw, 2.4rem);
     }
 
     .texto-sobre::-webkit-scrollbar {
@@ -674,8 +841,8 @@ RESPONSIVIDADE - MEDIA QUERIES
     }
 
     .mapa-container iframe {
-        width: 100px !important;
-        height: 100px !important;
+        width: 100px;
+        height: 100px;
     }
 
     .footer-bottom p {
