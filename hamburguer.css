@@ -17,22 +17,29 @@
 .nav-layout li {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 0;
     margin-right: 10px;
-    height: 70px;  
+    height: 70px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.nav-layout li:hover {
+.nav-layout a:hover {
     background-color: #836f5f;
-    border-radius: 1px;
     transition: background-color 0.3s ease;
 }
 
 .nav-layout a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
     text-decoration: none;
     color: #fff;
     letter-spacing: 1px;
     font-weight: 500;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
 /* Rolagem com menu */
@@ -161,9 +168,8 @@ body.menu-open {
     }
 
     .menu-navegacao a:hover {
-        background: rgba(131, 111, 95, 0.28);
+        background-color: #9b816cbd;
         border-color: rgba(194, 146, 114, 0.22);
-        transform: translateX(-4px);
     }
 
     .mobile-menu {

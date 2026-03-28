@@ -8,8 +8,12 @@ RESPONSIVIDADE - MEDIA QUERIES
 
 
 /* MEDIA 1024 */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
     /* CABEÇALHO */
+    .logo {
+        width: 500px;
+          
+    }
     
     /* sessão 1 */
     .home {
@@ -47,6 +51,31 @@ RESPONSIVIDADE - MEDIA QUERIES
 
     .texto-sobre p {
         font-size: 1.1rem;
+    }
+
+
+     .texto-sobre {
+        max-height: 400px;
+        overflow-y: auto;
+        padding-right: 10px;
+    }
+
+    .texto-sobre::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .texto-sobre::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+
+    .texto-sobre::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+    }
+
+    .texto-sobre::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
     }
 
     .galeria {
@@ -121,8 +150,19 @@ RESPONSIVIDADE - MEDIA QUERIES
         margin-top: 50px;
     }
 
+    .botoes-acao {
+        display: flex;
+        gap: 10px;
+    }
+
+    .botoes-acao a {
+        flex: 1;
+        display: flex;
+    }
+
     .btn-insta {
-        width: 370px;
+        width: 100%;
+        margin-right: 0;
     }
 
 /* FOOTER */
@@ -202,9 +242,13 @@ RESPONSIVIDADE - MEDIA QUERIES
     }
 
     .cartao-container {
-        width: 100%;
-        height: auto;
-        margin-left: 0;
+        width: min(100%, 70%);
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .cartao-inner {
+        height: 100%;
     }
 
     .texto-sobre {
@@ -216,10 +260,17 @@ RESPONSIVIDADE - MEDIA QUERIES
     .texto-sobre p {
         text-align: center;
         margin-bottom: 15px;
+        display: flex;
     }
 
     .lado img {
-        height: auto;
+        height: 100%;
+
+    }
+
+    .frente img {
+        width: 100%;
+        height: 100%;
     }
 
 
@@ -263,8 +314,8 @@ RESPONSIVIDADE - MEDIA QUERIES
     }
 
     .btn-insta {
-        width: 330px;
-        margin-right: 3px;
+        width: 100%;
+        margin-right: 0;
     }
 }
 
@@ -296,29 +347,89 @@ RESPONSIVIDADE - MEDIA QUERIES
         transform: translateY(-50%);
         z-index: 1005;
     }
+
+    .menu-navegacao {
+        width: 100vw;
+        top: 10vh;
+    }
     
     .mobile-menu div {
-        width: 25px;
-        height: 3px;
         background-color: #fff;
         transition: 0.3s;
+        width: 25px;
+        height: 2px;
+        margin: 1px;
+    }
+
+    /* SOBRE-MIM */
+    .cartao-container {
+        width: 350px;
+        min-width: 300px;
+        margin: 0 auto;
+    }
+
+    .frente img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .texto-sobre {
+        max-height: 500px;
+        overflow-y: auto;
+        padding-right: 10px;
+    }
+
+    .texto-sobre::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .texto-sobre::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+
+    .texto-sobre::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+    }
+
+    .texto-sobre::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
     }
 
     /* GALERIA */
     .galeria-container {
-        width: 95%;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    justify-items: center;
     }
-    
+
     .card-tatoo {
-        height: 200px;
+    height: 320px;
+    width: 100%;
+    max-width: 180px;
     }
-    
-    .texto-galeria {
-        width: 50%;
+
+    .card-tatoo:nth-child(1),
+    .card-tatoo:nth-child(2),
+    .card-tatoo:nth-child(3) {
+        grid-row: 1;
     }
+
+    .card-tatoo:nth-child(4) {
+        grid-row: 2;
+        margin-left: 250px;
+    }
+
+    .card-tatoo:nth-child(5) {
+        grid-row: 2;
+        margin-left: 250px;
+    }
+
 
     /* CUIDADOS */
     .interface-cuidados {
@@ -424,8 +535,8 @@ RESPONSIVIDADE - MEDIA QUERIES
     }
 }
 
-/* MEDIA 480PX */
-@media (max-width: 480px) {
+/* MEDIA 650PX */
+@media (max-width: 650px) {
 
     /* CABEÇALHO */
     .logo {
@@ -439,8 +550,7 @@ RESPONSIVIDADE - MEDIA QUERIES
     }
 
     .logo p {
-
-        font-size: 0.95rem !important;
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem) !important;
     }
 
     .mobile-menu div{
@@ -557,7 +667,7 @@ RESPONSIVIDADE - MEDIA QUERIES
     }
 
     .card-tatoo {
-    height: 180px;
+    height: 250px;
     width: 100%;
     max-width: 180px;
     }
@@ -570,12 +680,12 @@ RESPONSIVIDADE - MEDIA QUERIES
 
     .card-tatoo:nth-child(4) {
         grid-row: 2;
-        margin-left: 100px;
+        margin-left: 110%;
     }
 
     .card-tatoo:nth-child(5) {
         grid-row: 2;
-        margin-left: 100px;
+        margin-left: 110%;
     }
 
     .card-perfil-instagram {
@@ -600,8 +710,8 @@ RESPONSIVIDADE - MEDIA QUERIES
     }
 
     .btn-insta {
-        width: 150px;
-        margin-right: 3px;
+        width: 100%;
+        margin-right: 0;
     }
 
     .texto-galeria {
@@ -823,8 +933,68 @@ RESPONSIVIDADE - MEDIA QUERIES
     }
 }
 
-@media (max-width: 342px) {
-    .btn-insta {
-        width: 110px;    
+@media (max-width: 480px) {
+/* GALERIA SECTION */
+    .galeria-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    justify-items: center;
     }
+
+    .card-tatoo {
+    height: 180px;
+    width: 100%;
+    max-width: 180px;
+    }
+
+    .card-tatoo:nth-child(1),
+    .card-tatoo:nth-child(2),
+    .card-tatoo:nth-child(3) {
+        grid-row: 1;
+    }
+
+    .card-tatoo:nth-child(4) {
+        grid-row: 2;
+        margin-left: 110%;
+    }
+
+    .card-tatoo:nth-child(5) {
+        grid-row: 2;
+        margin-left: 110%;
+    }
+
+    .card-perfil-instagram {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .foto-avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .header-perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 15px;
+    }
+
+    .btn-insta {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .texto-galeria {
+        width: 75%;
+    }
+
 }
