@@ -25,10 +25,6 @@
     margin-bottom: 10px;
 }
 
-.cabecalho {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
 .interface-header {
     width: 100%;
     max-width: 100%;
@@ -272,42 +268,6 @@
 }
 
 /* Posts no Instagram */
-.galeria {
-    background-color: black;
-    height: 140vh;
-    padding-top: 100px; 
-}
-
-
-.galeria-titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.linha-galeria {
-    width: 100%;
-    height: 1px;
-    background-color: #5d4a3e;
-    box-shadow: 0 0 10px rgba(139, 101, 76, 0.4);
-    margin-top: 50px;
-}
-
-.texto-galeria {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -15px;
-    background-color: black;
-    border: 2px solid #5d4a3e;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50px;
-}
-
-
-/* Posts no Instagram */
 .galeria-container {
     margin-top: 20px;
     width: 50%;
@@ -423,6 +383,11 @@
     margin-top: auto;
 }
 
+.botoes-acao a {
+    flex: 1;
+    display: flex;
+}
+
 .btn-insta {
     flex: 1;
     border: none;
@@ -430,8 +395,8 @@
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
-    width: 210px;
-    margin-right: 10px;
+    width: 100%;
+    margin-right: 0;
 }
 
 .azul {

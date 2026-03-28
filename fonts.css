@@ -94,21 +94,14 @@ p{
     text-shadow: none;
 }
 
-.interface-cuidados h2{
-    font-size: 40px;
-}
-
 .interface-cuidados h3 {
     font-size: 23px;
+    font-family: "Nunito", sans-serif;
 }
 
 .interface-cuidados p{
     font-size: 15px;
     text-shadow: none;
-}
-
-.interface-cuidados h3 {
-    font-family: "Nunito", sans-serif;
 }
 
 /* orçamento */

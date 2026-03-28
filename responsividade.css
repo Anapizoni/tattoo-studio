@@ -1,11 +1,6 @@
 /* ========================================
 RESPONSIVIDADE - MEDIA QUERIES
 ======================================== */
-@media (max-width: 1395px) {
-   
-}
-
-
 
 /* MEDIA 1024 */
 @media (max-width: 1100px) {
@@ -593,10 +588,6 @@ RESPONSIVIDADE - MEDIA QUERIES
         line-height: 1.4;
     }
 
-    .logo p {
-        font-size: 1.3rem;
-    }
-
     /* SOBRE */
     .interface-sobre {
         padding: 20px;
@@ -691,31 +682,6 @@ RESPONSIVIDADE - MEDIA QUERIES
     .card-perfil-instagram {
         width: 80%;
         padding: 20px;
-    }
-
-    .foto-avatar {
-        width: 150px;
-        height: 150px;
-    }
-
-    .header-perfil {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .stats {
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 15px;
-    }
-
-    .btn-insta {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .texto-galeria {
-        width: 75%;
     }
 
 /* CUIDADOS SECTION */
@@ -965,36 +931,6 @@ RESPONSIVIDADE - MEDIA QUERIES
     .card-tatoo:nth-child(5) {
         grid-row: 2;
         margin-left: 110%;
-    }
-
-    .card-perfil-instagram {
-        width: 80%;
-        padding: 20px;
-    }
-
-    .foto-avatar {
-        width: 150px;
-        height: 150px;
-    }
-
-    .header-perfil {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .stats {
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 15px;
-    }
-
-    .btn-insta {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .texto-galeria {
-        width: 75%;
     }
 
 }
