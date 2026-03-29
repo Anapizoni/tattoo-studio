@@ -83,7 +83,6 @@ if (mobileMenu && menuNavegacao) {
 
 // CARTAO SOBRE - TOQUE NO MOBILE
 const cartaoSobre = document.querySelector(".cartao-container");
-const imagemVersoSobre = document.querySelector(".cartao-container .verso img");
 
 function isMobileTouch() {
     return window.matchMedia("(hover: none), (pointer: coarse)").matches;
@@ -95,20 +94,7 @@ if (cartaoSobre) {
             return;
         }
 
-        if (!cartaoSobre.classList.contains("virado")) {
-            cartaoSobre.classList.add("virado");
-        }
-    });
-}
-
-if (imagemVersoSobre && cartaoSobre) {
-    imagemVersoSobre.addEventListener("click", (event) => {
-        if (!isMobileTouch()) {
-            return;
-        }
-
-        event.stopPropagation();
-        cartaoSobre.classList.remove("virado");
+        cartaoSobre.classList.toggle("virado");
     });
 }
 
