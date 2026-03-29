@@ -81,6 +81,37 @@ if (mobileMenu && menuNavegacao) {
     });
 }
 
+// CARTAO SOBRE - TOQUE NO MOBILE
+const cartaoSobre = document.querySelector(".cartao-container");
+const imagemVersoSobre = document.querySelector(".cartao-container .verso img");
+
+function isMobileTouch() {
+    return window.matchMedia("(hover: none), (pointer: coarse)").matches;
+}
+
+if (cartaoSobre) {
+    cartaoSobre.addEventListener("click", () => {
+        if (!isMobileTouch()) {
+            return;
+        }
+
+        if (!cartaoSobre.classList.contains("virado")) {
+            cartaoSobre.classList.add("virado");
+        }
+    });
+}
+
+if (imagemVersoSobre && cartaoSobre) {
+    imagemVersoSobre.addEventListener("click", (event) => {
+        if (!isMobileTouch()) {
+            return;
+        }
+
+        event.stopPropagation();
+        cartaoSobre.classList.remove("virado");
+    });
+}
+
 //FORMULÁRIO
     const contatoForm = document.querySelector(".formulario-contato form");
     const orcamentoButtons = document.querySelectorAll(".btn-orcamento");

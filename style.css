@@ -179,6 +179,10 @@
     transform: rotateY(180deg);
 }
 
+.cartao-container.virado .cartao-inner {
+    transform: rotateY(180deg);
+}
+
 .lado {
     position: absolute;
     width: 100%;
