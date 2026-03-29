@@ -12,7 +12,7 @@ RESPONSIVIDADE - MEDIA QUERIES
     
     /* sessão 1 */
     .home {
-        height: auto;
+        height: 100vh;
         min-height: 70vh;
     }
 
@@ -41,7 +41,7 @@ RESPONSIVIDADE - MEDIA QUERIES
     /* SOBRE SECTION */
 
     .sobre {
-        height: 80vh;
+        height: 100vh;
     }
 
     .texto-sobre p {
@@ -896,6 +896,11 @@ RESPONSIVIDADE - MEDIA QUERIES
 
     .footer-bottom p {
         font-size: 0.85rem;
+    }
+    
+    .foto-avatar {
+        width: 100px;
+        height: 100px;
     }
 }
 
