@@ -939,12 +939,12 @@ RESPONSIVIDADE - MEDIA QUERIES
     }
 
     .stats {
-        font-size: clamp(0.9rem, 2vw, 1.2rem);
+        font-size: clamp(0.8rem, 2vw, 1.2rem);
     }
     .username {
-        font-size: clamp(1.1rem, 3vw, 1.5rem);
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
     }
     .nome-completo {
-        font-size: clamp(0.9rem, 2vw, 1.2rem);
+        font-size: clamp(0.8rem, 2vw, 1.2rem);
     }
 }
